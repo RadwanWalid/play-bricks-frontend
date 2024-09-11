@@ -14,6 +14,7 @@ type Props = {}
 
 const Navbar = (props: Props) => {
 
+  const pathname = usePathname();
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
   const underlineRef = useRef<any>();
   const navigationRef = useRef<any>();
@@ -27,7 +28,7 @@ const Navbar = (props: Props) => {
 
     let CurrentUsername = LocalStorage === 'Guest' ? LocalStorage : JSON.parse(LocalStorage as string).username;
     setUsername(CurrentUsername);
-  }, [usePathname()]);
+  }, [pathname]);
 
   const setUnderline = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
       underlineRef.current.classList.remove('opacity-0');

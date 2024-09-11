@@ -133,7 +133,7 @@ const Page = (props: Props) => {
       stlModels.map((model, index) => (
         <STLModelViewer key={index} meshData={model} maxWidth={maxSTLWidth} material={material} />
       )),
-    [stlModels, maxOBJWidth]
+    [stlModels, maxSTLWidth]
   );
 
   const getModelNames = async (e: React.ChangeEvent<HTMLInputElement>) => {

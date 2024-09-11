@@ -55,7 +55,7 @@ const Page = (props: Props) => {
     
         fetchSTLData();
         fetchOBJData();
-      }, []);
+      }, [isLoggedIn, router]);
   
     const getOBJModelData = async () => {
       axios.defaults.withCredentials = true;
@@ -123,7 +123,7 @@ const Page = (props: Props) => {
         mySTLModels.map((model, index) => (
           <STLModelViewer key={index} meshData={model} maxWidth={maxSTLWidth} material={material} />
         )),
-      [mySTLModels, maxOBJWidth]
+      [mySTLModels, maxSTLWidth]
     );
 
   return (

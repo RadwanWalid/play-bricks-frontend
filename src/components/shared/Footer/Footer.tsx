@@ -14,12 +14,13 @@ type Props = {}
 const Footer = (props: Props) => {
 
     const footerRef = useRef<any>();
+    const pathname = usePathname();
 
     useEffect(() => {
       if (footerRef.current) {
         window.location.pathname === '/Login' ? footerRef.current.classList.add('hidden') : footerRef.current.classList.remove('hidden');
       }
-    }, [usePathname()]);
+    }, [pathname]);
 
   return (
     <Container ref={footerRef} fluid className='p-4 bg-[#041833]'>
