@@ -7,23 +7,17 @@ import { PropsWithChildren } from "react";
 type AuthContextType = {
     isLoggedIn: boolean,
     setIsLoggedIn: Dispatch<SetStateAction<boolean>>,
-    hideNavbarFooter: boolean,
 }
 
 const defaults = {
     isLoggedIn: false,
     setIsLoggedIn: () => {},
-    hideNavbarFooter: true,
 }
 
 const AuthContext = React.createContext<AuthContextType>(defaults);
 
 export const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
-
-  const currentPath = usePathname();
-  console.log(currentPath);
   
-  let hideNavbarFooter = currentPath === '/Login';
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
     const storedValue = (typeof window !== 'undefined' && window.localStorage) ? localStorage?.getItem('isLoggedIn') : null;
     return storedValue ? JSON.parse(storedValue) : false;
@@ -37,7 +31,7 @@ export const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn, setIsLoggedIn, hideNavbarFooter }}
+      value={{ isLoggedIn, setIsLoggedIn }}
     >
       {children}
     </AuthContext.Provider>

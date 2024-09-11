@@ -3,8 +3,11 @@ import LandingModel from "../components/LandingModel/LandingModel";
 import PopularModels from "../components/PopularModels/PopularModels";
 import Link from "next/link";
 import Image from "next/image";
+import { useMemo, useState } from "react";
 
 export default function Home() {
+
+  const [modelReady, setModelReady] = useState(false);
 
   const downloadGame = () => {
     const fileUrl = '/PlayBricks Desktop/Play Bricks Setup (x86).zip';
@@ -19,7 +22,24 @@ export default function Home() {
     document.body.removeChild(link);
   };
 
-  return (
+  const MemoizedLandingModel = useMemo(
+    () => <LandingModel onloaded={() => setModelReady(true)} />,
+    [modelReady, setModelReady]
+  );
+
+  if (!modelReady) {
+    return (
+      <div className="relative flex items-center justify-center h-screen">
+        <div className="loader relative bottom-11 after:border-[#7EEBFF_transparent]" />
+        <div className="hidden">
+          {MemoizedLandingModel}
+        </div>
+      </div>
+    );
+  }
+
+  if(modelReady)
+    return (
     <div>
       <div className="flex items-center relative h-[31rem] mb-6">
         <section className="my-10 mx-20 space-y-2 flex-[1]">
@@ -49,7 +69,7 @@ export default function Home() {
             <Link as='/Game' href='/Game'><div className="cursor-pointer border-2 border-white rounded-md bg-transparent text-center text-sm px-4 py-3 hover:scale-110 transition-all duration-300 w-fit">Play Now</div></Link>
           </div>
         </section>
-        <LandingModel />
+        {MemoizedLandingModel}
       </div>
       
       <div className="mt-4">

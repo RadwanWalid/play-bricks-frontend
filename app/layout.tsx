@@ -6,15 +6,12 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import 'react-tooltip/dist/react-tooltip.css'
 import Navbar from '../components/shared/Navbar/Navbar';
 import Footer from '../components/shared/Footer/Footer';
-import AuthContext, { AuthProvider } from '../context/AuthContext';
-import { useContext } from 'react';
+import { AuthProvider } from '../context/AuthContext';
 import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-
-  const { hideNavbarFooter } = useContext(AuthContext);
 
   return (
     <html lang="en">
