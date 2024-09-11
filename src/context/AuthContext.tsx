@@ -13,7 +13,7 @@ type AuthContextType = {
 const defaults = {
     isLoggedIn: false,
     setIsLoggedIn: () => {},
-    hideNavbarFooter: true,
+    hideNavbarFooter: false,
 }
 
 const AuthContext = React.createContext<AuthContextType>(defaults);
