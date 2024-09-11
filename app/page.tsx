@@ -29,9 +29,9 @@ export default function Home() {
 
   if (!modelReady) {
     return (
-      <div className="relative flex items-center justify-center h-screen">
-        <div className="loader relative bottom-11 after:border-[#7EEBFF_transparent]" />
-        <div className="hidden">
+      <div className="relative flex items-center justify-center h-screen w-full">
+        <div className="loader bottom-11 mx-1 after:border-[#7EEBFF_transparent]" />
+        <div className="absolute left-0 overflow-hidden h-0 w-0">
           {MemoizedLandingModel}
         </div>
       </div>
