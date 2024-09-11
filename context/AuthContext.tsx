@@ -21,6 +21,7 @@ const AuthContext = React.createContext<AuthContextType>(defaults);
 export const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   const currentPath = usePathname();
+  console.log(currentPath);
   
   let hideNavbarFooter = currentPath === '/Login';
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
