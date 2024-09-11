@@ -8,6 +8,7 @@ import Navbar from '../components/shared/Navbar/Navbar';
 import Footer from '../components/shared/Footer/Footer';
 import AuthContext, { AuthProvider } from '../context/AuthContext';
 import { useContext } from 'react';
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,9 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
-          {!hideNavbarFooter && <Navbar />}
+          {usePathname() != '/Login' && <Navbar />}
             {children}
-          {!hideNavbarFooter && <Footer />}
+          {usePathname() != '/Login' && <Footer />}
         </AuthProvider>
       </body>
     </html>
