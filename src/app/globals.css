@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url('../../public/images/vecteezy_blue-light-islamic-arabesque-background-design-template_7005555.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  font-family: "Carmen Sans Medium" !important;
+  color: white;
+  font-size: large;
+  backdrop-filter: blur(4px);
+  scroll-behavior: smooth;
+}
+
+div::-webkit-scrollbar {
+  width: 0.45em;
+  height: 0.45rem;
+}
+
+div::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: rgba(200, 200, 200, 0.5);
+  border-radius: 20px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(200, 200, 200, 0.6);
+  border-radius: 20px;
+}
+
+.text-with-glow {
+  text-shadow: 0 0 4px rgba(126, 238, 255, 0.8), 0 0 8px rgba(126, 238, 255, 0.6), 0 0 10px rgba(126, 238, 255, 0.4);
+}
+
+#login-page {
+  background-image: url('../../public/images/islamic-background-with-mandala-arabesque-style_339006-261.jpg');
+  background-attachment: fixed;
+  background-size: contain;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+}
+
+.flip-card-back {
+  background-color: transparent;
+  transform: rotateY(180deg);
+}
+@font-face {
+  src: url("../../public/fonts/Boatman Regular.ttf");
+  font-family: "Boatman Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../../public/fonts/Mrs Onion.otf");
+  font-family: "Mrs Onion";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../../public/fonts/Posterama Text Bold.otf");
+  font-family: "Posterama Text Bold";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("../../public/fonts/Carmen Sans Medium.otf");
+  font-family: "Carmen Sans Medium";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

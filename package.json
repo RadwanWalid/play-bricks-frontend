@@ -1,0 +1,47 @@
+{
+  "name": "fontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.1",
+    "@react-three/drei": "^9.84.2",
+    "@react-three/fiber": "^8.14.2",
+    "@types/node": "20.2.1",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "10.4.14",
+    "axios": "^1.5.0",
+    "bootstrap": "^5.3.2",
+    "bson": "^5.5.0",
+    "classnames": "^2.3.2",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "file-saver": "^2.0.5",
+    "lodash": "^4.17.21",
+    "next": "13.4.3",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.46.1",
+    "react-icons": "^4.11.0",
+    "react-loading-skeleton": "^3.3.1",
+    "react-tooltip": "^5.21.4",
+    "regexp-to-ast": "^0.5.0",
+    "tailwindcss": "3.3.2",
+    "tailwindcss-animation-delay": "^1.0.7",
+    "three": "^0.152.2",
+    "typescript": "5.0.4",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/file-saver": "^2.0.5"
+  }
+}
