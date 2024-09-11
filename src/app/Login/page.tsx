@@ -61,7 +61,7 @@ const Login = (props: CardFaceProps) => {
 
     async function Submit(data: any, e: any) {
         e.preventDefault();
-        await axios.post('http://localhost:5000/User/login', {
+        await axios.post('https://play-bricks-backend.vercel.app/User/login', {
             username: data.username,
             password: data.password
         }, { withCredentials: true }).then((res) => {
@@ -150,7 +150,7 @@ const Register = (props: CardFaceProps) => {
     async function Submit(data: any, e: any) {
         e.preventDefault();
         axios.defaults.withCredentials = true;
-        await axios.post('http://localhost:5000/User/register', {
+        await axios.post('https://play-bricks-backend.vercel.app/User/register', {
             username: data.username,
             email: data.email,
             password: data.password,

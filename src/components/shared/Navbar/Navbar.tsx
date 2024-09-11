@@ -78,7 +78,7 @@ const LoggedInData = (props: LoggedInProps) => {
 
   async function logout() {
     axios.defaults.withCredentials = true;
-    await axios.get('http://localhost:5000/User/logout').then((response) => {
+    await axios.get('https://play-bricks-backend.vercel.app/User/logout').then((response) => {
       console.log(response.data);
     });
     props.setIsLoggedIn(false);

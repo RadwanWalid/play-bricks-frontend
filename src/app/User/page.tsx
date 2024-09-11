@@ -59,13 +59,13 @@ const Page = (props: Props) => {
   
     const getOBJModelData = async () => {
       axios.defaults.withCredentials = true;
-      let res = await axios.put('http://localhost:5000/Model/getUserOBJModels', { username: JSON.parse(localStorage.getItem('UserInfo') as string).username })
+      let res = await axios.put('https://play-bricks-backend.vercel.app/Model/getUserOBJModels', { username: JSON.parse(localStorage.getItem('UserInfo') as string).username })
       return res.data;
     };
 
     const getSTLModelData = async () => {
       axios.defaults.withCredentials = true;
-      let res = await axios.put('http://localhost:5000/Model/getUserSTLModels', { username: JSON.parse(localStorage.getItem('UserInfo') as string).username })
+      let res = await axios.put('https://play-bricks-backend.vercel.app/Model/getUserSTLModels', { username: JSON.parse(localStorage.getItem('UserInfo') as string).username })
       return res.data;
     };
 

@@ -38,7 +38,7 @@ const PopularModels: React.FC<Props> = () => {
 
   const getModelData = async () => {
     axios.defaults.withCredentials = true;
-    const res = await axios.get('http://localhost:5000/Model/getAllModels');
+    const res = await axios.get('https://play-bricks-backend.vercel.app/Model/getAllModels');
     return res.data;
   };
 

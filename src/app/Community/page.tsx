@@ -69,13 +69,13 @@ const Page = (props: Props) => {
 
   const getOBJModelData = async () => {
     axios.defaults.withCredentials = true;
-    let res = await axios.get('http://localhost:5000/Model/getAllOBJModels')
+    let res = await axios.get('https://play-bricks-backend.vercel.app/Model/getAllOBJModels')
     return res.data;
   };
 
   const getSTLModelData = async () => {
     axios.defaults.withCredentials = true;
-    let res = await axios.get('http://localhost:5000/Model/getAllSTLModels')
+    let res = await axios.get('https://play-bricks-backend.vercel.app/Model/getAllSTLModels')
     return res.data;
   };
 
@@ -139,7 +139,7 @@ const Page = (props: Props) => {
   const getModelNames = async (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
     axios.defaults.withCredentials = true;
-    await axios.put('http://localhost:5000/Model/getModelNamesForSearch', { keyword: e.target.value })
+    await axios.put('https://play-bricks-backend.vercel.app/Model/getModelNamesForSearch', { keyword: e.target.value })
     .then((res) => {
       setSearchResults(res.data);
     })
@@ -147,7 +147,7 @@ const Page = (props: Props) => {
 
   const showModel = async (name: StringIdTuple) => {
     axios.defaults.withCredentials = true;
-    await axios.put('http://localhost:5000/Model/getModelByNameAndID', { name: name })
+    await axios.put('https://play-bricks-backend.vercel.app/Model/getModelByNameAndID', { name: name })
     .then((res) => {
       const meshDataString = atob(res.data.meshData);
       if(res.data.type == 'OBJ') {
