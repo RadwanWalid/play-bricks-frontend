@@ -30,8 +30,13 @@ module.exports = {
           '50%': { transform: 'translateY(8px)' },
           '75%, 100%': { transform: 'translateY(0px)' },
         }
-      }, animation: {
+      }, 
+      animation: {
         bounce: 'wave-animation 5s infinite', 
+      }, 
+      screens: {
+        '1130': { max: '1130px' },
+        '988': { max: '988px' },
       }
     },
   },

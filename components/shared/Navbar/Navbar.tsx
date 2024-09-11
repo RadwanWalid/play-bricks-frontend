@@ -9,6 +9,7 @@ import { FaUserCircle } from 'react-icons/fa';
 import { MdOutlineLogout } from 'react-icons/md'
 import axios from 'axios';
 import AuthContext from '../../../context/AuthContext';
+import ToggleButton from '../ToggleButton/ToggleButton';
 
 type Props = {}
 
@@ -19,6 +20,7 @@ const Navbar = (props: Props) => {
   const underlineRef = useRef<any>();
   const navigationRef = useRef<any>();
   const [username, setUsername] = useState<String | undefined>(undefined);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
 
   useEffect(() => {
     if (navigationRef.current) {
@@ -44,25 +46,28 @@ const Navbar = (props: Props) => {
   }
 
   return (
-    <div ref={navigationRef} className='flex justify-between items-center mr-10 ml-8 h-20 relative z-50'>
+    <nav ref={navigationRef} className={`flex justify-between min-h-[5rem] items-center mr-10 ml-8 988:mx-0 988:pt-4 relative z-50 988:sticky 988:top-0 988:flex-col 988:items-start 988:bg-[#041833] transition-all duration-300`}>
+      <div className='988:flex 988:justify-between 988:items-center 988:w-full'>
         <Link as='/' href='/' placeholder='Homepage'>
-            <div className='flex justify-center items-center space-x-5'>
+            <div className='flex justify-center items-center space-x-5 whitespace-nowrap pl-8'>
                 <GiCubes className='scale-[2.5]' />
-                <h1 className='uppercase text-3xl font-["Boatman_Regular"]'>Play Bricks</h1>
+                <h1 className='uppercase text-3xl font-["Boatman_Regular"] whitespace-nowrap'>Play Bricks</h1>
             </div>
         </Link>
-        {/* <Image className='pt-2.5' height={90} width={90} src='/images/Logo.png' alt='Logo' /> */}
-        <div onMouseLeave={hideUnderline} className='flex justify-center items-center space-x-7 h-fit relative'>
-            <Link onMouseOver={(e) => setUnderline(e)} id='Navbar-AboutUs-link' as='/AboutUs' href='/AboutUs'>About Us</Link>
-            <Link onMouseOver={(e) => setUnderline(e)} id='Navbar-Community-link' as='/Community' href='/Community'>Community</Link>
-            <Link onMouseOver={(e) => setUnderline(e)} id='Navbar-GameControls-link' as='/GameControls' href='/GameControls'>Game Controls</Link>
-            <Link onMouseOver={(e) => setUnderline(e)} id='Navbar-Game-link' as='/Game' href='/Game'>Let&apos;s Play</Link>
-            {
-              isLoggedIn ? <LoggedInData setIsLoggedIn={setIsLoggedIn} username={username} />: <Link onMouseOver={setUnderline} className='text-blue-950 relative px-2 hover:scale-110 transition-all duration-300' id='Navbar-GameControls-link' as='/Login' href='/Login'>Log In/Register<Image className='absolute -top-[0.55rem] left-0 h-11 max-h-[2.75rem] w-full -z-[1]' height={100} width={100} src='/images/Lego Brick Fill.png' alt='Lego Brick' /></Link>
-            }
-            <Image ref={underlineRef} className='absolute right-0 h-11 max-h-[2.75rem] w-auto opacity-0 -z-[1] transition-all duration-300' height={100} width={100} src='/images/Lego Brick.png' alt='Lego Brick' />
-        </div>
-    </div>
+        <ToggleButton isClicked={isClicked} setIsClicked={setIsClicked} />
+      </div>
+      {/* <Image className='pt-2.5' height={90} width={90} src='/images/Logo.png' alt='Logo' /> */}
+      <div onMouseLeave={hideUnderline} className={`${ isClicked ? '988:h-screen 988:p-6': '988:h-0'} 988:space-y-4 988:space-y-reverse 988:top-6 988:overflow-hidden transition-all duration-200 flex 988:justify-end justify-center items-center space-x-7 988:space-x-0 h-fit relative 988:flex-col-reverse 988:bg-[#041833] 988:w-full`}>
+          <Link onMouseOver={(e) => setUnderline(e)} id='Navbar-AboutUs-link' as='/AboutUs' href='/AboutUs'>About Us</Link>
+          <Link onMouseOver={(e) => setUnderline(e)} id='Navbar-Community-link' as='/Community' href='/Community'>Community</Link>
+          <Link onMouseOver={(e) => setUnderline(e)} id='Navbar-GameControls-link' as='/GameControls' href='/GameControls'>Game Controls</Link>
+          <Link onMouseOver={(e) => setUnderline(e)} id='Navbar-Game-link' as='/Game' href='/Game'>Let&apos;s Play</Link>
+          {
+            isLoggedIn ? <LoggedInData setIsLoggedIn={setIsLoggedIn} username={username} />: <Link onMouseOver={(e) => setUnderline(e)} className='text-blue-950 988:text-white relative pl-2 pr-2 988:px-0 hover:scale-110 transition-all duration-300' id='Navbar-GameControls-link' as='/Login' href='/Login'>Log In/Register<Image className='absolute -top-[0.55rem] left-0 h-11 max-h-[2.75rem] w-full -z-[1] 988:hidden' height={100} width={100} src='/images/Lego Brick Fill.png' alt='Lego Brick' /></Link>
+          }
+          <Image ref={underlineRef} className='absolute right-0 h-11 max-h-[2.75rem] w-auto opacity-0 -z-[1] transition-all duration-300 988:hidden' height={100} width={100} src='/images/Lego Brick.png' alt='Lego Brick' />
+      </div>
+    </nav>
   )
 }
 

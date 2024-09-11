@@ -20,6 +20,7 @@
     "bootstrap": "^5.3.2",
     "bson": "^5.5.0",
     "classnames": "^2.3.2",
+    "dotenv": "^16.4.5",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "file-saver": "^2.0.5",

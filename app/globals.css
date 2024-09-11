@@ -13,6 +13,19 @@ body {
   font-size: large;
   backdrop-filter: blur(4px);
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body,
+html {
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 div::-webkit-scrollbar {
