@@ -12,7 +12,7 @@ import { useRouter } from 'next/navigation';
 import { root } from 'postcss';
 import Link from 'next/link';
 import { error } from 'console';
-import AuthContext from '@/context/AuthContext';
+import AuthContext from '../../context/AuthContext';
 
 type Props = {}
 const ErrorP = classNames(`text-red-600 text-xs font-semibold mt-1`)

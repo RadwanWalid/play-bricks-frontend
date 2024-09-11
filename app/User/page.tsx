@@ -5,10 +5,10 @@ import axios from 'axios';
 import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
-import OBJModelViewer from '@/components/OBJModelViewer/OBJModelViewer';
-import ModelViewerSkeleton from '@/components/OBJModelViewer/ModelViewerSkeleton';
-import STLModelViewer from '@/components/STLModelViewer/STLModelViewer';
-import AuthContext from '@/context/AuthContext';
+import OBJModelViewer from '../../components/OBJModelViewer/OBJModelViewer';
+import ModelViewerSkeleton from '../../components/OBJModelViewer/ModelViewerSkeleton';
+import STLModelViewer from '../../components/STLModelViewer/STLModelViewer';
+import AuthContext from '../../context/AuthContext';
 
 type Props = {}
 

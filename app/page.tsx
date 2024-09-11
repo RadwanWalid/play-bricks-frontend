@@ -1,6 +1,6 @@
 'use client';
-import LandingModel from "@/components/LandingModel/LandingModel";
-import PopularModels from "@/components/PopularModels/PopularModels";
+import LandingModel from "../components/LandingModel/LandingModel";
+import PopularModels from "../components/PopularModels/PopularModels";
 import Link from "next/link";
 import Image from "next/image";
 

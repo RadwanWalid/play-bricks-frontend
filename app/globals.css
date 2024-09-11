@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-image: url('../../public/images/vecteezy_blue-light-islamic-arabesque-background-design-template_7005555.jpg');
+  background-image: url('../public/images/vecteezy_blue-light-islamic-arabesque-background-design-template_7005555.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-size: 100vw 100vh;
@@ -39,7 +39,7 @@ div::-webkit-scrollbar-thumb:hover {
 }
 
 #login-page {
-  background-image: url('../../public/images/islamic-background-with-mandala-arabesque-style_339006-261.jpg');
+  background-image: url('../public/images/islamic-background-with-mandala-arabesque-style_339006-261.jpg');
   background-attachment: fixed;
   background-size: contain;
   background-size: 100vw 100vh;
@@ -81,7 +81,7 @@ div::-webkit-scrollbar-thumb:hover {
   transform: rotateY(180deg);
 }
 @font-face {
-  src: url("../../public/fonts/Boatman Regular.ttf");
+  src: url("../public/fonts/Boatman Regular.ttf");
   font-family: "Boatman Regular";
   font-weight: normal;
   font-style: normal;
@@ -89,7 +89,7 @@ div::-webkit-scrollbar-thumb:hover {
 }
 
 @font-face {
-  src: url("../../public/fonts/Mrs Onion.otf");
+  src: url("../public/fonts/Mrs Onion.otf");
   font-family: "Mrs Onion";
   font-weight: normal;
   font-style: normal;
@@ -97,7 +97,7 @@ div::-webkit-scrollbar-thumb:hover {
 }
 
 @font-face {
-  src: url("../../public/fonts/Posterama Text Bold.otf");
+  src: url("../public/fonts/Posterama Text Bold.otf");
   font-family: "Posterama Text Bold";
   font-weight: normal;
   font-style: normal;
@@ -105,7 +105,7 @@ div::-webkit-scrollbar-thumb:hover {
 }
 
 @font-face {
-  src: url("../../public/fonts/Carmen Sans Medium.otf");
+  src: url("../public/fonts/Carmen Sans Medium.otf");
   font-family: "Carmen Sans Medium";
   font-weight: normal;
   font-style: normal;
