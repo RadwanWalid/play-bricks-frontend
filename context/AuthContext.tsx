@@ -22,7 +22,7 @@ export const AuthProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   const currentPath = usePathname();
   
-  const hideNavbarFooter = currentPath === '/Login';
+  let hideNavbarFooter = currentPath === '/Login';
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
     const storedValue = (typeof window !== 'undefined' && window.localStorage) ? localStorage?.getItem('isLoggedIn') : null;
     return storedValue ? JSON.parse(storedValue) : false;
