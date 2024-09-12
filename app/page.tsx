@@ -41,42 +41,55 @@ export default function Home() {
   if(modelReady)
     return (
     <div>
-      <div className="flex items-center relative h-[31rem] mb-6">
-        <section className="my-10 mx-20 space-y-2 flex-[1]">
-          <div className="text-7xl relative uppercase font-bold text-with-glow leading-tight">
-            <span className="land-span relative inline-block animate-bounce animation-delay-100">L</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-200">e</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-300">t</span>
-            &nbsp;
-            <span className="land-span relative inline-block animate-bounce animation-delay-400">T</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-500">h</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-600">e</span>
-            <br />
-            <span className="land-span relative inline-block animate-bounce animation-delay-700">G</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-800">a</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-900">m</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-1000">e</span>
-            &nbsp;
-            <span className="land-span relative inline-block animate-bounce animation-delay-1100">B</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-1200">e</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-1300">g</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-1400">i</span>
-            <span className="land-span relative inline-block animate-bounce animation-delay-1500">n</span>
+      <div className="flex items-center relative h-[31rem] mb-6 704:h-full 704:flex-col-reverse">
+        <section className="my-10 mx-20 988:mx-10 580:!mx-0 434:!mx-4 relative 704:bottom-10 space-y-2 flex-[1] 988:flex-initial">
+          <div className="text-7xl 1130:text-6xl 580:!text-4xl 580:h-52 434:!h-44 434:top-6 relative 580:w-full 704:right-8 uppercase font-bold text-with-glow leading-tight 704:grid 580:gap-x-16 704:grid-cols-3 704:grid-rows-[1fr_1fr]">
+            <div className="whitespace-nowrap 704:text-right inline-block 704:relative 704:left-8 434:!left-12 704:top-5 704:col-[1/2] 704:row-[1]">
+              <span className="land-span relative inline-block animate-bounce animation-delay-100">L</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-200">e</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-300">t</span>
+            </div>
+            <div className="hidden whitespace-nowrap text-right 434:scale-90 434:!bottom-12 mx-auto 704:inline-block 580:-translate-x-[21%] relative 704:bottom-6 col-[2/3] row-[1/3]">
+              {MemoizedLandingModel}
+            </div>
+            <span className="704:hidden"> </span>
+            <div className="whitespace-nowrap 704:text-right inline-block 704:relative 704:left-2 434:!left-8 580:bottom-6 704:col-[1/2] 704:row-[2]">
+              <span className="land-span relative inline-block animate-bounce animation-delay-400">T</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-500">h</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-600">e</span>
+            </div>
+            <br className="704:hidden" />
+            <div className="whitespace-nowrap 704:text-right inline-block 704:relative 704:top-5 704:right-6 434:!right-8 704:col-[3/4] 704:row-[1]">
+              <span className="land-span relative inline-block animate-bounce animation-delay-700">G</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-800">a</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-900">m</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-1000">e</span>
+            </div>
+            <span className="704:hidden"> </span>
+            <div className="whitespace-nowrap 704:text-right inline-block 704:relative 704:right-0 434:!right-2 580:bottom-6 704:col-[3/4] 704:row-[2]">
+              <span className="land-span relative inline-block animate-bounce animation-delay-1100">B</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-1200">e</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-1300">g</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-1400">i</span>
+              <span className="land-span relative inline-block animate-bounce animation-delay-1500">n</span>
+            </div>
           </div>
-          <p className="text-[0.9rem]">Immerse yourself in the beauty of Islamic architecture as you construct magnificent buildings using LEGO blocks. Harness the intricate patterns and textures inspired by centuries-old designs, and unleash your creativity to shape a breathtaking cityscape that pays homage to the rich heritage of Islamic art and culture.</p>
-          <div className="space-x-6 pt-3 flex font-bold items-center">
-            <button onClick={downloadGame} className="cursor-pointer border-2 border-white rounded-md text-center text-sm px-4 py-3 bg-white text-blue-950 hover:scale-110 transition-all duration-300 w-fit">Download & Play offline</button>
-            <Link as='/Game' href='/Game'><div className="cursor-pointer border-2 border-white rounded-md bg-transparent text-center text-sm px-4 py-3 hover:scale-110 transition-all duration-300 w-fit">Play Now</div></Link>
+          <p className="text-[0.9rem] 580:text-xs 988:pt-2 434:mx-6 704:text-center">Immerse yourself in the beauty of Islamic architecture as you construct magnificent buildings using LEGO blocks. Harness the intricate patterns and textures inspired by centuries-old designs, and unleash your creativity to shape a breathtaking cityscape that pays homage to the rich heritage of Islamic art and culture.</p>
+          <div className="space-x-6 pt-3 flex font-bold items-center 704:justify-center">
+            <button onClick={downloadGame} className="cursor-pointer border-2 border-white rounded-md text-center text-sm 434:whitespace-nowrap px-4 py-3 bg-white text-blue-950 hover:scale-110 transition-all duration-300 w-fit">Download <span className="434:hidden">& Play offline</span></button>
+            <Link as='/Game' href='/Game'><div className="cursor-pointer border-2 border-white rounded-md bg-transparent 434:whitespace-nowrap text-center text-sm px-4 py-3 hover:scale-110 transition-all duration-300 w-fit">Play Now</div></Link>
           </div>
         </section>
-        {MemoizedLandingModel}
+        <div className="flex-[1] h-full 988:relative 988:top-10 704:flex-initial 704:hidden block">
+          {MemoizedLandingModel}
+        </div>
       </div>
       
       <div className="mt-4">
         <h1 className="text-4xl ml-24 mb-6">Our Community&apos;s Latest Hits</h1>
         <PopularModels />
       </div>
-
+{/* 
       <div className="text-center my-20">
         <div className="mb-14">
           <h1 className="text-5xl font-bold mb-6">Meet Our Team</h1>
@@ -102,7 +115,7 @@ export default function Home() {
             <p className="w-40">MET Bachelor Student at The German University in Cairo</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -18,6 +18,7 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
       </div>
     </div>
@@ -55,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Last WebGL Build.loader.js";
+      var loaderUrl = buildUrl + "/WebGL With Deoplyed Server.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Last WebGL Build.data",
-        frameworkUrl: buildUrl + "/Last WebGL Build.framework.js",
-        codeUrl: buildUrl + "/Last WebGL Build.wasm",
+        dataUrl: buildUrl + "/WebGL With Deoplyed Server.data",
+        frameworkUrl: buildUrl + "/WebGL With Deoplyed Server.framework.js",
+        codeUrl: buildUrl + "/WebGL With Deoplyed Server.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "PlayBricks",
         productName: "PlayBricksIV",
@@ -67,7 +68,7 @@
         showBanner: unityShowBanner,
       };
 
-      // By default Unity keeps WebGL canvas render target size matched with
+      // By default, Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
       // Set this to false if you want to decouple this synchronization from
       // happening inside the engine, and you would instead like to size up
