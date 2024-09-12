@@ -94,7 +94,7 @@ const PopularModels: React.FC<Props> = () => {
   );
 
   return (
-    <div className='overflow-x-auto flex items-center my-1 p-3 space-x-10 mb-12 mx-24'>
+    <div className='overflow-x-auto flex items-center my-1 p-3 space-x-10 mb-12 mx-24 434:mx-6'>
       {!isModelLoaded && <ModelViewerSkeleton count={10} />}
       {isModelLoaded && MemoizedModels}
     </div>
