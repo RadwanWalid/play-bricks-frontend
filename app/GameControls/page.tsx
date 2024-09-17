@@ -26,66 +26,92 @@ const page = (props: Props) => {
         <p className='italic'>Hover over any button to show what it does.</p>
       </div>
 
-      <div className='flex justify-around items-center space-x-10'>
-        <div className='space-y-4 -mt-14'>
-          <div className='flex items-center justify-start space-x-4'>
-            <div id='Q' className='hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 h-32 text-5xl relative p-11'>Q</div>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#Q" place="top">
-              Move Up
-            </Tooltip>
-            <div id='W' className='hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 h-32 text-5xl relative p-11'>W</div>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#W" place="top">
-              Move Forward
-            </Tooltip>
-            <div id='E' className='hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 h-32 text-5xl relative p-11'>E</div>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#E" place="top">
-              Move Down
-            </Tooltip>
-            <div id='R' className='hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 h-32 text-5xl relative p-11'>R</div>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#R" place="top">
-              Rotate the block before placing it.
+      <div className='flex justify-around items-center space-x-10 988:flex-col-reverse 988:space-x-0'>
+        <div className='space-y-4 -mt-14 1130:mt-0 relative 988:!right-3'>
+          <div className='flex items-center justify-start space-x-4 relative 636:space-x-0 636:flex-col'>
+            <div className='flex items-center justify-between 636:w-full 636:space-x-4'>
+              <h1 className='636:block hidden'>Move Up</h1>
+              <div id='Q' className='flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 1130:w-24 704:!w-16 704:!h-16 1130:text-4xl 704:!text-2xl h-32 text-5xl relative p-11 636:flex 636:items-center 636:space-x-4'>Q</div>
+              <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#Q" place="top">
+                Move Up
+              </Tooltip>
+            </div>
+            <div className='flex items-center justify-between 636:w-full 636:space-x-4'>
+              <h1 className='636:block hidden'>Move Forward</h1>
+              <div id='W' className='flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 1130:w-24 704:!w-16 704:!h-16 1130:text-4xl 704:!text-2xl h-32 text-5xl relative p-11 636:flex 636:items-center 636:space-x-4'>W</div>
+              <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#W" place="top">
+                Move Forward
+              </Tooltip>
+            </div>
+            <div className='flex items-center justify-between 636:w-full 636:space-x-4'>
+              <h1 className='636:block hidden'>Move Up</h1>
+              <div id='E' className='flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 1130:w-24 704:!w-16 704:!h-16 1130:text-4xl 704:!text-2xl h-32 text-5xl relative p-11 636:flex 636:items-center 636:space-x-4'>E</div>
+              <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#E" place="top">
+                Move Down
+              </Tooltip>
+            </div>
+            <div className='flex items-center justify-between 636:w-full 636:space-x-4'>
+              <h1 className='636:block hidden'>Rotate the block before placing it.
               <br />
-              (Effect appears on the preview block)
-            </Tooltip>
-            <div id='DELETE' className='hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-56 h-32 text-5xl relative px-3 py-10 left-6'>DELETE</div>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#DELETE" place="top">
-              Delete the highlighted block
-            </Tooltip>
+              (Effect appears on the preview block)</h1>
+              <div id='R' className='flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 1130:w-24 704:!w-16 704:!h-16 1130:text-4xl 704:!text-2xl h-32 text-5xl relative p-11 636:flex 636:items-center 636:space-x-4'>R</div>
+              <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#R" place="top">
+                Rotate the block before placing it.
+                <br />
+                (Effect appears on the preview block)
+              </Tooltip>
+            </div>
+            <div className='flex items-center justify-between 636:w-full 636:space-x-4'>
+              <h1 className='636:block hidden'>Delete the highlighted block</h1>
+              <div id='DELETE' className='flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-56 1130:w-40 704:!w-28 704:!h-16 1130:text-4xl 704:!text-2xl h-32 text-5xl relative px-3 py-10 left-6 636:flex 636:items-center 636:space-x-4'>DELETE</div>
+              <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#DELETE" place="top">
+                Delete the highlighted block
+              </Tooltip>
+            </div>
           </div>
-          <div className='flex items-center justify-start space-x-4'>
-            <div id='A' className='hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 h-32 text-5xl relative p-11'>A</div>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#A" place="top">
-              Move Left
-            </Tooltip>
-            <div id='S' className='hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 h-32 text-5xl relative p-11'>S</div>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#S" place="top">
-              Move Backward
-            </Tooltip>
-            <div id='D' className='hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 h-32 text-5xl relative p-11'>D</div>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#D" place="top">
-              Move Right
-            </Tooltip>
+          <div className='flex items-center justify-start space-x-4 relative 636:space-x-0 636:flex-col'>
+            <div className='flex items-center justify-between 636:w-full 636:space-x-4'>
+              <h1 className='636:block hidden'>Move Left</h1>
+              <div id='A' className='flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 1130:w-24 704:!w-16 704:!h-16 1130:text-4xl 704:!text-2xl h-32 text-5xl relative p-11 636:flex 636:items-center 636:space-x-4'>A</div>
+              <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#A" place="top">
+                Move Left
+              </Tooltip>
+            </div>
+            <div className='flex items-center justify-between 636:w-full 636:space-x-4'>
+              <h1 className='636:block hidden'>Move Backward</h1>
+              <div id='S' className='flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 1130:w-24 704:!w-16 704:!h-16 1130:text-4xl 704:!text-2xl h-32 text-5xl relative p-11 636:flex 636:items-center 636:space-x-4'>S</div>
+              <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#S" place="top">
+                Move Backward
+              </Tooltip>
+            </div>
+            <div className='flex items-center justify-between 636:w-full 636:space-x-4'>
+              <h1 className='636:block hidden'>Move Right</h1>
+              <div id='D' className='flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300 rounded-md -skew-x-[15deg] before:content-[""] before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:rounded-md before:border-2 before:border-white w-32 1130:w-24 704:!w-16 704:!h-16 1130:text-4xl 704:!text-2xl h-32 text-5xl relative p-11 636:flex 636:items-center 636:space-x-4'>D</div>
+              <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#D" place="top">
+                Move Right
+              </Tooltip>
+            </div>
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center scale-[0.85]'>
+        <div className='flex flex-col items-center justify-center scale-[0.85] relative 1130:left-10 988:!left-0 1130:-top-4 1130:scale-[0.75]'>
           <div className='flex items-center justify-center relative w-fit space-x-1'>
             <svg id='left-click' className='fill-transparent hover:fill-[rgba(255,_255,_255,_0.3)] transition-all duration-300 -scale-x-100' width="147" height="165" viewBox="0 0 147 165" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M140.868 164H39.6138C36.8083 164 34.5527 161.691 34.6137 158.886C35.7075 108.613 35.3782 77.2666 7.03864 79.1732C3.893 79.3848 1 77.0613 1 73.9085V6C1 3.23858 3.23858 1 6 1H109.423C111.797 1 113.843 2.66859 114.321 4.99344L145.766 157.993C146.403 161.095 144.034 164 140.868 164Z" stroke="white" strokeWidth="2.5"/>
             </svg>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#left-click" place="top">
+            <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#left-click" place="top">
               Place a block
             </Tooltip>
 
-            <div id='scroll-wheel' className='absolute left-[7.35rem] top-[5.25rem] w-14 h-[5.25rem] rounded-full border-2 border-white hover:bg-white hover:bg-opacity-30 transition-all duration-300' />
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#scroll-wheel" place="top">
+            <div id='scroll-wheel' className='absolute left-[7.35rem] top-[5.25rem] w-14 h-[5.25rem] rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:bg-opacity-30 transition-all duration-300' />
+            <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#scroll-wheel" place="top">
               Move Up/Down (Alternative for Q/E keys)
             </Tooltip>
 
             <svg id='right-click' className='fill-transparent hover:fill-[rgba(255,_255,_255,_0.3)] transition-all duration-300 ' width="147" height="165" viewBox="0 0 147 165" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M140.868 164H39.6138C36.8083 164 34.5527 161.691 34.6137 158.886C35.7075 108.613 35.3782 77.2666 7.03864 79.1732C3.893 79.3848 1 77.0613 1 73.9085V6C1 3.23858 3.23858 1 6 1H109.423C111.797 1 113.843 2.66859 114.321 4.99344L145.766 157.993C146.403 161.095 144.034 164 140.868 164Z" stroke="white" strokeWidth="2.5"/>
             </svg>
-            <Tooltip style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#right-click" place='top'>
+            <Tooltip className='636:hidden' style={{color: 'rgb(23 37 84 / 1)', backgroundColor: 'white', opacity: 1}} anchorSelect="#right-click" place='top'>
               Hold and move the mouse to rotate around the scene.
             </Tooltip>
           </div>

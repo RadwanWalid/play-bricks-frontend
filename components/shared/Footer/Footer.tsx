@@ -24,7 +24,7 @@ const Footer = (props: Props) => {
 
   return (
     <div ref={footerRef} className='p-4 relative flex justify-center bg-[#041833]'>
-        <div className='text-center w-full grid grid-cols-4 988:grid-cols-2 988:gap-y-6'>
+        <div className='text-center w-full grid grid-cols-4 988:grid-cols-2 988:gap-8'>
             <div className={footerCol}>
                 <h4 className={colHeader}><div className={colHeaderText}>Website</div></h4>
                 <ul className={colData}>
@@ -55,7 +55,7 @@ const Footer = (props: Props) => {
             </div>
             <div className={footerCol}>
                 <h4 className={colHeader}><div className={colHeaderText}>Follow Us</div></h4>
-                <ul className={`${colData} flex flex-wrap`}>
+                <ul className={`${colData} flex flex-wrap 434:-ml-2 434:grid 434:grid-cols-2 434:gap-4`}>
                     <li><button className={colIcons}><FiFacebook /></button></li>
                     <li><button className={colIcons}><FiTwitter /></button></li>
                     <li><button className={colIcons}><FiInstagram /></button></li>
@@ -67,7 +67,7 @@ const Footer = (props: Props) => {
   )
 }
 
-const footerCol = classNames(`flex flex-col items-center`);
+const footerCol = classNames(`flex flex-col items-start`);
 const colHeader = classNames(`w-fit relative right-6 border-b-[3px] border-[#7EEBFF] px-1 pb-1 skew-x-[40deg]`);
 const colHeaderText = classNames(`-skew-x-[40deg] ml-2 text-xl`);
 const colData = classNames(`text-left mt-3 ml-1`);

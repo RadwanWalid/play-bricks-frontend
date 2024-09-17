@@ -4,7 +4,7 @@ type Props = {}
 
 const page = (props: Props) => {
   return (
-    <div className='my-20 mx-60 text-center leading-10'>
+    <div className='my-16 mx-40 434:mx-6 580:mx-10 580:my-6 988:mx-16 flex items-center text-center leading-10'>
       Play Bricks is proud to introduce the talented team behind the creation of the Play Bricks game. Our dedicated and passionate group of individuals came together with a shared vision to deliver an immersive and enjoyable gaming experience for players of all ages.
 
       Led by our experienced game designers, developers, and artists, our team worked tirelessly to bring Play Bricks to life. With a deep understanding of gameplay mechanics, captivating visuals, and engaging storytelling, we aimed to create a game that captures the hearts and minds of players.

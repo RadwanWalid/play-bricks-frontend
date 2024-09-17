@@ -51,12 +51,14 @@ div::-webkit-scrollbar-thumb:hover {
 }
 
 #login-page {
-  background-image: url('../public/images/islamic-background-with-mandala-arabesque-style_339006-261.jpg');
+  /* background-image: url('../public/images/islamic-background-with-mandala-arabesque-style_339006-261.jpg'); */
   background-attachment: fixed;
   background-size: contain;
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
-}
+  /* background-size: 100% 100%; */
+  background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+  background-image: radial-gradient(18% 28% at 24% 50%, #153870FF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #22267C59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #022D73FF 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #2A1876FF 7%, #073AFF00 100%),radial-gradient(42% 53% at 34% 72%, #08265AFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #0F2380FF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #2D1BABFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #0F2C5AFF 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #0E2279FF 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #09244DFF 24%, #073AFF00 100%),linear-gradient(125deg, #0C3F6E 1%, #020E26 100%);}
 
 .flip-card {
   background-color: transparent;

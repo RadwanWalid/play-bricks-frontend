@@ -22,7 +22,7 @@ const Page = (props: Props) => {
     const [isLogin, setIsLogin] = useState<boolean>(true);
 
   return (
-    <div id='login-page' className='relative overflow-hidden w-screen h-screen flex flex-col items-end justify-center pr-40'>
+    <div id='login-page' className='relative overflow-hidden flex items-center justify-center h-screen'>
         <div className='flip-card'>
             <Link className='cursor-pointer w-[100px]' as='/' href='/'><Image className='mx-auto' priority height={100} width={100} src='/images/Logo.png' alt='Logo' /></Link>
             <div className={`flip-card-inner ${isLogin ? '': 'rotate-y-180'}`}>

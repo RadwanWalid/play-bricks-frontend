@@ -38,7 +38,7 @@ export default function Home() {
               <span className="land-span relative inline-block animate-bounce animation-delay-300">t</span>
             </div>
             <div className="hidden whitespace-nowrap text-right 434:scale-90 434:!bottom-12 mx-auto 704:inline-block 580:-translate-x-[21%] relative 704:bottom-6 col-[2/3] row-[1/3]">
-              {!modelReady && <div className="loader mx-1 top-8 right-10 after:border-[#7EEBFF_transparent]" />}
+              {!modelReady && <div className="loader mx-1 top-14 right-14 434:top-20 434:right-[4.25rem] after:border-[#7EEBFF_transparent]" />}
               {MemoizedLandingModel}
             </div>
             <span className="704:hidden"> </span>
@@ -63,7 +63,7 @@ export default function Home() {
               <span className="land-span relative inline-block animate-bounce animation-delay-1500">n</span>
             </div>
           </div>
-          <p className="text-[0.9rem] 580:text-xs 988:pt-2 434:mx-6 704:text-center">Immerse yourself in the beauty of Islamic architecture as you construct magnificent buildings using LEGO blocks. Harness the intricate patterns and textures inspired by centuries-old designs, and unleash your creativity to shape a breathtaking cityscape that pays homage to the rich heritage of Islamic art and culture.</p>
+          <p className="text-[0.9rem] 580:text-xs 988:pt-2 580:mx-6 704:text-center">Immerse yourself in the beauty of Islamic architecture as you construct magnificent buildings using LEGO blocks. Harness the intricate patterns and textures inspired by centuries-old designs, and unleash your creativity to shape a breathtaking cityscape that pays homage to the rich heritage of Islamic art and culture.</p>
           <div className="space-x-6 pt-3 flex font-bold items-center 704:justify-center">
             <button onClick={downloadGame} className="cursor-pointer border-2 border-white rounded-md text-center text-sm 434:whitespace-nowrap px-4 py-3 bg-white text-blue-950 hover:scale-110 transition-all duration-300 w-fit">Download <span className="434:hidden">& Play offline</span></button>
             <Link as='/Game' href='/Game'><div className="cursor-pointer border-2 border-white rounded-md bg-transparent 434:whitespace-nowrap text-center text-sm px-4 py-3 hover:scale-110 transition-all duration-300 w-fit">Play Now</div></Link>
