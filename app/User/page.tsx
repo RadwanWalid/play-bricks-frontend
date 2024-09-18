@@ -129,12 +129,12 @@ const Page = (props: Props) => {
   return (
     <div className='my-8 space-y-8'>
       <section>
-        <div className='ml-32'>
-          <h1 className='text-4xl'>My OBJ Models</h1>
-          <p>You have a total of {myOBJModels.length} OBJ models!</p>
+        <div className='ml-32 916:w-fit 916:mx-auto 916:px-6'>
+          <h1 className='text-4xl 704:text-2xl'>My OBJ Models</h1>
+          <p className='704:text-sm'>You have a total of {myOBJModels.length} OBJ models!</p>
         </div>
         <div className="flex justify-center mt-8">
-          <div className="grid grid-flow-row grid-cols-3 gap-20">
+          <div className="grid grid-flow-row grid-cols-3 gap-16 786:grid-cols-2 512:!grid-cols-1 512:gap-8">
               {!isOBJModelLoaded && <ModelViewerSkeleton count={6} />}
               {isOBJModelLoaded && MemoizedOBJModels}
           </div>
@@ -142,12 +142,12 @@ const Page = (props: Props) => {
       </section>
 
       <section>
-        <div className='ml-32'>
-          <h1 className='text-4xl'>My STL Models</h1>
-          <p>You have a total of {mySTLModels.length} STL models!</p>
+        <div className='ml-32 916:w-fit 916:mx-auto 916:px-6'>
+          <h1 className='text-4xl 704:text-2xl'>My STL Models</h1>
+          <p className='704:text-sm'>You have a total of {mySTLModels.length} STL models!</p>
         </div>
         <div className="flex justify-center mt-8">
-          <div className="grid grid-flow-row grid-cols-3 gap-20">
+          <div className="grid grid-flow-row grid-cols-3 gap-16 786:grid-cols-2 512:!grid-cols-1 512:gap-8">
               {!isSTLModelLoaded && <ModelViewerSkeleton count={6} />}
               {isSTLModelLoaded && MemoizedSTLModels}
           </div>

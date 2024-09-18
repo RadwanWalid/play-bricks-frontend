@@ -44,8 +44,8 @@ const STLModelViewer: React.FC<Props> = ({ meshData, material, style }) => {
   const MemoizedMesh = useMemo(() => <Mesh mesh={meshData.modelData as THREE.Group} />, [meshData.modelData]);
 
   return (
-    <div className={`${style} rounded-md bg-white px-8 h-56 text-center relative bottom-0 ${style ? '': 'hover:bottom-2'} hover:shadow-lg transition-all duration-300`}>
-      <p className="text-black absolute top-2 right-4 py- text-xs font-bold italic">.{meshData.type} File</p>
+    <div className={`${style} rounded-md bg-white px-8 aspect-[48/56] text-center relative bottom-0 ${style ? '': 'hover:bottom-2 h-56'} hover:shadow-lg transition-all duration-300`}>
+      <p className="text-black absolute top-2 right-4 text-xs font-bold italic">.{meshData.type} File</p>
       <div style={{ width: `${style ? '18': '8.00371'}rem`, height: `${style ? '100%': 'initial'}`}}>
         <Canvas shadows camera={{ position: [-0.5, 0, 1], fov: 45, zoom: 0.725 }} className="touch-none">
           <PresentationControls speed={1} global polar={[-0.1, Math.PI / 4]}>

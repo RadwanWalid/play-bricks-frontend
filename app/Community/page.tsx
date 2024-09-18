@@ -18,16 +18,16 @@ type StringIdTuple = {
 };
 
 type Model = {
-    modelTitle: string;
-    modelData: THREE.Group | THREE.Mesh<THREE.BufferGeometry<THREE.NormalBufferAttributes>, THREE.Material | THREE.Material[]>;
-    creatorUsername: string;
-    type: 'STL' | 'OBJ';
+  modelTitle: string;
+  modelData: THREE.Group | THREE.Mesh<THREE.BufferGeometry<THREE.NormalBufferAttributes>, THREE.Material | THREE.Material[]>;
+  creatorUsername: string;
+  type: 'STL' | 'OBJ';
 };
 
 const material = new THREE.MeshStandardMaterial({
-    color: 0xbb9c75,
-    transparent: false,
-    opacity: 1,
+  color: 0xbb9c75,
+  transparent: false,
+  opacity: 1,
 });
 
 const objLoader = new OBJLoader();
@@ -173,19 +173,21 @@ const Page = (props: Props) => {
   }
 
   return (
-    <div className='my-8 space-y-8'>
-      <div ref={viewedModelRef} className='fixed hidden top-0 h-screen z-10 w-full justify-center items-center bg-black bg-opacity-20'>
-        <button onClick={() => {viewedModelRef.current?.classList.remove('flex'); viewedModelRef.current?.classList.add('hidden');}} className='text-blue-950 absolute left-[29.5rem] top-20 z-10 scale-[2.5] hover:text-blue-800 transition-all duration-300'><IoClose /></button>
-        {searchedModel?.type === 'OBJ' ? <OBJModelViewer style='h-[28rem]' meshData={searchedModel} material={material} /> : <STLModelViewer style='h-[28rem]' meshData={searchedModel} material={material} />}
+    <div className='mt-8 space-y-8'>
+      <div ref={viewedModelRef} className='sticky hidden top-0 -mt-16 pb-8 h-screen z-10 w-full justify-center items-center bg-black bg-opacity-20'>
+        <div className='relative 988:top-10 580:scale-[0.85]'>
+          <button onClick={() => {viewedModelRef.current?.classList.remove('flex'); viewedModelRef.current?.classList.add('hidden');}} className='text-blue-950 absolute left-4 top-4 z-10 scale-[2.5] hover:text-blue-800 transition-all duration-300'><IoClose /></button>
+          {searchedModel?.type === 'OBJ' ? <OBJModelViewer style='h-[28rem]' meshData={searchedModel} material={material} /> : <STLModelViewer style='h-[28rem]' meshData={searchedModel} material={material} />}
+        </div>
       </div>
 
 
-      <div className='ml-36 relative w-fit'>
-        <div className='w-fit'>
-          <input type='text' onChange={(e) => getModelNames(e)} value={inputValue} placeholder='Search for Model' className='py-2 px-4 text-blue-950 rounded-full bg-white outline-none' />
-          <button className='absolute right-3 text-blue-950 scale-150 top-0 bottom-0 hover:scale-[1.65] transition-all duration-300'><BiSearchAlt /></button>
+      <div className='ml-36 relative w-fit 580:w-full 580:ml-0'>
+        <div className='w-fit 580:w-full 580:px-6 relative'>
+          <input type='text' onChange={(e) => getModelNames(e)} value={inputValue} placeholder='Search for Model' className='py-2 px-4 text-blue-950 rounded-full bg-white outline-none 580:w-full' />
+          <button className='absolute right-3 580:right-10 text-blue-950 scale-150 top-0 bottom-0 hover:scale-[1.65] transition-all duration-300'><BiSearchAlt /></button>
         </div>
-        <div ref={searchMenuRef} className={`${inputValue == "" ? 'hidden': ''} absolute w-96 top-12 left-0 z-30 bg-white space-y-1 rounded-lg p-1 transition-all duration-300`}>
+        <div ref={searchMenuRef} className={`${inputValue == "" ? 'hidden': ''} absolute w-96 top-12 left-0 580:w-[calc(100%-1rem)] 580:!left-2 z-30 bg-white space-y-1 rounded-lg p-1 transition-all duration-300`}>
           {
             searchResults?.map((name, index) => (
               <p key={index} onClick={() => showModel(name)} className='flex items-center cursor-pointer w-full text-blue-950 hover:text-blue-900 hover:bg-gray-300 px-2 py-1 rounded-lg transition-all duration-300'>{name.modelTitle}</p>
@@ -195,12 +197,12 @@ const Page = (props: Props) => {
       </div>
 
       <section>
-        <div className='ml-32'>
-          <h1 className='text-4xl'>Community&apos;s Popular OBJ Models</h1>
-          <p>There is a total of {objModels.length} OBJ models!</p>
+        <div className='ml-32 916:w-fit 916:mx-auto 916:px-6'>
+          <h1 className='text-4xl 704:text-2xl'>Community&apos;s Popular OBJ Models</h1>
+          <p className='704:text-sm'>There is a total of {objModels.length} OBJ models!</p>
         </div>
         <div className="flex justify-center mt-8">
-          <div className="grid grid-flow-row grid-cols-3 gap-20">
+          <div className="grid grid-cols-3 gap-16 786:grid-cols-2 512:!grid-cols-1 512:gap-8">
               {!isOBJModelLoaded && <ModelViewerSkeleton count={6} />}
               {isOBJModelLoaded && MemoizedOBJModels}
           </div>
@@ -208,12 +210,12 @@ const Page = (props: Props) => {
       </section>
 
       <section>
-        <div className='ml-32'>
-          <h1 className='text-4xl'>Community&apos;s Popular STL Models</h1>
-          <p>There is a total of {stlModels.length} STL models!</p>
+        <div className='ml-32 916:w-fit 916:mx-auto 916:px-6'>
+          <h1 className='text-4xl 704:text-2xl'>Community&apos;s Popular STL Models</h1>
+          <p className='704:text-sm'>There is a total of {stlModels.length} STL models!</p>
         </div>
         <div className="flex justify-center mt-8">
-          <div className="grid grid-flow-row grid-cols-3 gap-20">
+          <div className="grid grid-flow-row grid-cols-3 gap-16 786:grid-cols-2 512:!grid-cols-1 512:gap-8">
               {!isSTLModelLoaded && <ModelViewerSkeleton count={6} />}
               {isSTLModelLoaded && MemoizedSTLModels}
           </div>
